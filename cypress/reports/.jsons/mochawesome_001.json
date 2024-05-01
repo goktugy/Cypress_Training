@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-29T06:07:19.895Z",
+    "end": "2023-05-29T06:07:27.776Z",
+    "duration": 7881,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "264c1fcb-1cb9-4827-8d39-8915b118813e",
+      "title": "",
+      "fullFile": "cypress/integration/e2e/FAQ.js",
+      "file": "cypress/integration/e2e/FAQ.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c66ea21b-d3a6-4fe3-8965-c2d1badca562",
+          "title": "User Should Be Able To Go To FAQ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should Be Able To Go To FAQ Page",
+              "fullTitle": "User Should Be Able To Go To FAQ Should Be Able To Go To FAQ Page",
+              "timedOut": null,
+              "duration": 5279,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_supportPage.default.FAQ();\ncy.contains(\"Can I use TestCafe for free?\").should('be.visible');",
+              "err": {},
+              "uuid": "2d601a7c-f6dd-4445-b2b9-bade80d684ac",
+              "parentUUID": "c66ea21b-d3a6-4fe3-8965-c2d1badca562",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2d601a7c-f6dd-4445-b2b9-bade80d684ac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5279,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "charts": true,
+        "reportPageTitle": "Test Automation Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

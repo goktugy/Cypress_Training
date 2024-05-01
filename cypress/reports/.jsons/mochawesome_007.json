@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-05-29T06:08:04.502Z",
+    "end": "2023-05-29T06:09:01.852Z",
+    "duration": 57350,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0e14abd6-8bb6-4200-bb9e-9302c7ebc2c2",
+      "title": "",
+      "fullFile": "cypress/integration/sample_training/count_check.js",
+      "file": "cypress/integration/sample_training/count_check.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd38499a-27b8-4791-be99-fedaf5c799d7",
+          "title": "Count Check",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Clicking a search button",
+              "fullTitle": "Count Check Clicking a search button",
+              "timedOut": null,
+              "duration": 36718,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.amazon.ca', 10000);\ncy.get('#twotabsearchtextbox').as('SearchBox');\ncy.get('@SearchBox').clear();\ncy.fixture(\"books\").then(book => {\n  const title = book.Title;\n  cy.get('@SearchBox').type(title);\n  cy.get('#nav-search-submit-button').click();\n  cy.writeFile(\"Test_Automation.log\", \"Test Case: count_check | Step: Verification \\n\");\n  cy.contains('Da Vinci Code').should('be.visible');\n  cy.writeFile(\"Test_Automation.log\", \"Test Case: count_check | Passed \\n\", {\n    flag: \"a+\"\n  });\n});",
+              "err": {},
+              "uuid": "e69208d6-a745-4a1c-b514-6cec3eab8e9a",
+              "parentUUID": "fd38499a-27b8-4791-be99-fedaf5c799d7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be listed under 7 book types and under \"Suspense\" type",
+              "fullTitle": "Count Check Should be listed under 7 book types and under \"Suspense\" type",
+              "timedOut": null,
+              "duration": 16476,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.reload();\ncy.log(\"After re-loading\");\ncy.get('#departments > ul').children().should('have.length', 8);\ncy.get('#departments > ul > li').eq(1).should('contain.text', 'Suspense');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Not enough elements found. Found '1', expected '8'.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Not enough elements found. Found '1', expected '8'.\n    at Context.eval (https://www.amazon.ca/__cypress/tests?p=cypress\\integration\\sample_training\\count_check.js:118:44)",
+                "diff": "- 1\n+ 8\n"
+              },
+              "uuid": "308fc1c0-d921-4968-af22-530e614d2532",
+              "parentUUID": "fd38499a-27b8-4791-be99-fedaf5c799d7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e69208d6-a745-4a1c-b514-6cec3eab8e9a"
+          ],
+          "failures": [
+            "308fc1c0-d921-4968-af22-530e614d2532"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 53194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "charts": true,
+        "reportPageTitle": "Test Automation Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

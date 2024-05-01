@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-29T06:43:49.965Z",
+    "end": "2023-05-29T06:43:56.471Z",
+    "duration": 6506,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1861dfcf-2c61-4213-84fb-628168fe41bb",
+      "title": "",
+      "fullFile": "cypress/integration/visual_testing/percy.js",
+      "file": "cypress/integration/visual_testing/percy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5d8360c9-53b5-49ca-a3bf-b168751f354e",
+          "title": "Integration test with visual testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Loads the homepage",
+              "fullTitle": "Integration test with visual testing Loads the homepage",
+              "timedOut": null,
+              "duration": 3454,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Load the page or perform any other interactions with the app.\ncy.visit(\"https://testcafe.io\"); // Take a snapshot for visual diffing\ncy.percySnapshot();",
+              "err": {},
+              "uuid": "069b1107-5c08-4d1e-b00b-5c5c6acdd987",
+              "parentUUID": "5d8360c9-53b5-49ca-a3bf-b168751f354e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "069b1107-5c08-4d1e-b00b-5c5c6acdd987"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3454,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "charts": true,
+        "reportPageTitle": "Test Automation Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

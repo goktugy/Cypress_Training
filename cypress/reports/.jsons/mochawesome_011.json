@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-29T06:10:24.460Z",
+    "end": "2023-05-29T06:10:28.796Z",
+    "duration": 4336,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2b591251-9d26-4547-bc58-d467505a60dc",
+      "title": "",
+      "fullFile": "cypress/integration/sample_training/testcafe.js",
+      "file": "cypress/integration/sample_training/testcafe.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1568cf27-3694-4f2d-ab97-0a847b39fb7f",
+          "title": "TestCafe.Io Testng",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to go to TestCafe.io",
+              "fullTitle": "TestCafe.Io Testng Should be able to go to TestCafe.io",
+              "timedOut": null,
+              "duration": 1400,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://testcafe.io\");",
+              "err": {},
+              "uuid": "ba7612ee-e141-44d4-ac5d-02361871832c",
+              "parentUUID": "1568cf27-3694-4f2d-ab97-0a847b39fb7f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ba7612ee-e141-44d4-ac5d-02361871832c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1400,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "charts": true,
+        "reportPageTitle": "Test Automation Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
