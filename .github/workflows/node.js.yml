@@ -21,7 +21,8 @@ jobs:
       with:
         node-version: 16.13.2
     - name: Cypress Run
-      run:
-         npm install
-         npm run cy:sample
+      working-directory: ./
+      run: |
+        npm install
+        npm run cy:sample
     
