@@ -20,5 +20,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16.13.2
-       
+    - name: Cypress Run
+      run:
+         npm install
+         npm run cy:sample
     
