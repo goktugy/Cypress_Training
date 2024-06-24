@@ -14,23 +14,23 @@ declare namespace Cypress{
     visitWorld() : Chainable <Element>
 
     /** 
-    * Goes to the Politics section of the URL    
+    * Goes to the Culture section of the URL    
     */
-    visitPolitics () : Chainable <Element> 
+    visitCulture () : Chainable <Element> 
 
     }
 
 }
 
 Cypress.Commands.add("visitHome", ()=>{
-    cy.visit("http://www.cnn.com")
+    cy.visit("http://www.bbc.com")
 })
 
 Cypress.Commands.add("visitWorld", ()=>{
-    cy.visit("http://www.cnn.com/world")
+    cy.visit("http://www.bbc.com/news")
 })
 
 
-Cypress.Commands.add("visitPolitics", ()=>{
-    cy.visit("http://www.cnn.com/politics")
+Cypress.Commands.add("visitCulture", ()=>{
+    cy.visit("http://www.bbc.com/culture")
 })
