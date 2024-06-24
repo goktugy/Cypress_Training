@@ -19,18 +19,11 @@
   "dependencies": {
     "@percy/cli": "^1.24.2",
     "@percy/cypress": "^3.1.2",
-    "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-mochawesome-reporter": "^3.3.0",
+    "cypress": "^13.9.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-xpath": "^2.0.1",
     "percy": "^5.0.0",
     "prettier": "^2.8.4",
     "typescript": "^5.0.3"
-  },
-  "cypress-cucumber-preprocessor": {
-    "stepDefinitions": [
-      "cypress/e2e/[filepath]/**/*.{js,ts}",
-      "cypress/e2e/[filepath].{js,ts}",
-      "cypress/support/step_definitions/**/*.{js,ts}"
-    ]
   }
 }

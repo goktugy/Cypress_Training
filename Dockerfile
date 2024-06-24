@@ -8,6 +8,6 @@ COPY cypress.config.ts .
 
 RUN npm install
 
-CMD ["npm", "run", "cy:sample"]
+CMD ["npm", "run", "cy:run"]
 
 
