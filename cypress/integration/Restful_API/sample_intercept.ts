@@ -3,7 +3,7 @@ import {getUTC} from '../../support/utilities.js'
 describe('Sample Intercept Call', () => {
    beforeEach ( () => {
       
-      cy.visit('/')
+      cy.visit('www.livescore.com')
 
       cy.get('[data-testid="search_icon"]').click({force:true})
       cy.intercept('/api/leftmenu/en/soccer/spain').as('SpainLeagues') 
@@ -14,8 +14,9 @@ describe('Sample Intercept Call', () => {
    })
 it('Spain La Liga Should Be Visible', () => {
    cy.contains('Spain').should('be.be.visible')
+   cy.screenshot()
    
-   cy.get('[data-testid="search_region-section"] > :nth-child(4)').click()
+   cy.get('[data-testid="search_region-section"] > :nth-child(6)').click()
 
    cy.wait('@SpainLeagues').then((interception) => {
       cy.log("Response",JSON.stringify(interception.response.body))

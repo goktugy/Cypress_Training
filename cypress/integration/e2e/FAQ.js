@@ -6,6 +6,7 @@ describe('User Should Be Able To Go To FAQ', () => {
     before( function(){
         
         cy.visit(URLLink) 
+        cy.get('.burger-stripes').click()
         NavBar.GoToSupport    
     })
 

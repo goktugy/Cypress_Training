@@ -10,18 +10,13 @@ describe('Count Check', ()=>{
                .type(title)
             cy.get('#nav-search-submit-button')
               .click()
-            cy.writeFile("Test_Automation.log", "Test Case: count_check | Step: Verification \n")
+            cy.writeFile("Test_Automation.log", "Test Case: count_check | Step: Visible Verification \n")
               cy.contains('Da Vinci Code').should('be.visible') 
-              cy.writeFile("Test_Automation.log", "Test Case: count_check | Passed \n", {flag:"a+"})
-          })
+              cy.writeFile("Test_Automation.log", "Test Case: count_check | Visible Verification Passed \n", {flag:"a+"})
+              cy.get('#departments > ul > span > span').children().should('have.length',9)
+              cy.get('#departments > ul > span > span').children().eq(1).should('contain.text', 'Suspense')
+              cy.writeFile("Test_Automation.log", "Test Case: count_check | Departments Check Passed \n", {flag:"a+"})
+            })
          
   })
- it('Should be listed under 7 book types and under "Suspense" type', () =>{
-    cy.reload()
-    cy.log("After re-loading")
-    cy.get('#departments > ul').children().should('have.length',8)
-    cy.get('#departments > ul > li').eq(1).should('contain.text', 'Suspense')
-
- })
-
 })
