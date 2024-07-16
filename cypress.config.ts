@@ -1,7 +1,7 @@
 import { defineConfig } from 'cypress'
 
 export default defineConfig({
-  projectId: 'p2e7rh',
+  projectId: "25mpma",
    // These settings apply everywhere unless overridden
   defaultCommandTimeout: 5000,
   viewportWidth: 1000,
