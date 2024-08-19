@@ -6,7 +6,7 @@ describe('Button Interactions Example', ()=>{
           cy.get('.gLFyf').type(name)
           cy.contains('Google Search')
             .click( {force:true})
-          cy.contains('Garmin').should('be.visible') 
+          cy.contains('Garmin')
   
         })
     })

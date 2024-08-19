@@ -15,7 +15,7 @@ describe('Sample Intercept Call', () => {
 it('Spain La Liga Should Be Visible', () => {
    cy.contains('Spain').should('be.be.visible')
    
-   cy.get('[data-testid="search_region-section"] > :nth-child(6)').click()
+   cy.get('[data-testid="search_region-section"] > :nth-child(4)').click()
 
    cy.wait('@SpainLeagues').then((interception) => {
       cy.log("Response",JSON.stringify(interception.response.body))
