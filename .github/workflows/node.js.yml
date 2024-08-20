@@ -12,6 +12,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest    
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2, 3, 4, 5]
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js 16.13.2 to run Cypress Test Automation
