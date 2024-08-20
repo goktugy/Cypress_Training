@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run --record --key 06b869ae-46ba-465c-b63e-1025dfc7938e",
+    "cy:run": "cypress run --record --parallel --key 06b869ae-46ba-465c-b63e-1025dfc7938e",
     "cy:percy": "percy exec -- cypress run",
     "cy:sample": "cypress run --record --key 06b869ae-46ba-465c-b63e-1025dfc7938e --spec ./cypress/integration/Restful_API/sample_intercept.ts"
   },
