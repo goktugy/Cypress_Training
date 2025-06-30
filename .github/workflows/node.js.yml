@@ -32,7 +32,7 @@ jobs:
         npm run cy:run
       continue-on-error: true
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3.0.0
+      uses: actions/upload-artifact@v4.0.0
       with:
         name: Gea Test Automation Artifact at ${{ steps.date.outputs.date }} 
         path: "./cypress/results"
