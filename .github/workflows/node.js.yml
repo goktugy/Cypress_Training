@@ -34,6 +34,6 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.0.0
       with:
-        name: Gea Test Automation Artifact at ${{ steps.date.outputs.date }} 
+        name: Cypress_Artifact_${{ strategy.job-index }}
         path: "./cypress/results"
     
