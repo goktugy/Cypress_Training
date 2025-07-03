@@ -5,8 +5,11 @@ describe('Sample Intercept Call', () => {
       
       cy.visit('www.livescore.com')
 
-      cy.get('[data-testid="search_icon"]').click({force:true})
-      cy.intercept('/api/leftmenu/en/soccer/spain').as('SpainLeagues') 
+      cy.get('.jv > .fv').click({force:true})
+
+      //cy.get('[data-testid="search_icon"]').click({force:true})
+      
+      cy.intercept('https://prod-cdn-public-api.livescore.com/v1/api/app/category-s/soccer/spain?locale=en').as('SpainLeagues') 
       cy.writeFile("Test_Automation_Intercept.log", getUTC() + "\t Retrieving Answers: \n")
       cy.writeFile("Test_Automation_Intercept.log", getUTC() + "\t This is the answer key for Spain: \n", {flag:"a+"})
       cy.writeFile("Test_Automation_Intercept.log", getUTC() + "\t" + JSON.stringify('@Spain') +'\n', {flag:"a+"})
@@ -15,7 +18,9 @@ describe('Sample Intercept Call', () => {
 it('Spain La Liga Should Be Visible', () => {
    cy.contains('Spain').should('be.be.visible')
    
-   cy.get('[data-testid="search_region-section"] > :nth-child(4)').click()
+   //cy.get('[data-testid="search_region-section"] > :nth-child(4)').click()
+
+   cy.contains("Spain").click()
 
    cy.wait('@SpainLeagues').then((interception) => {
       cy.log("Response",JSON.stringify(interception.response.body))
