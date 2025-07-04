@@ -7,6 +7,6 @@
   <li>Typescript Support </li>
   <li>Page Objects->Pagee</li>
   <li>Page Objects -> Component</li>
-  <li>Custom Commands For Cy</li>
+  <li>Custom Commands </li>
   <li>Capturing Network API Calls</li>
 </ul>
