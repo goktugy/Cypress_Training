@@ -6,7 +6,8 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run --record --parallel --key 06b869ae-46ba-465c-b63e-1025dfc7938e",
-    "cy:percy": "percy exec -- cypress run",
+    "cy:run_docker": "cypress run --record --ci-build-id $(date) --parallel --key 06b869ae-46ba-465c-b63e-1025dfc7938e",
+    "cy:percy": "percy exec cypress run --spec ./cypress/integration/visual_testing/percy.js",
     "cy:sample": "cypress run --record --key 06b869ae-46ba-465c-b63e-1025dfc7938e --spec ./cypress/integration/Restful_API/sample_intercept.ts"
   },
   "keywords": [
@@ -24,6 +25,7 @@
     "cypress-xpath": "^2.0.1",
     "percy": "^5.0.0",
     "prettier": "^2.8.4",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.3",
+    "yarn": "^1.22.22"
   }
 }
